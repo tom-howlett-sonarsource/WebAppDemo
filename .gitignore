@@ -1,0 +1,60 @@
+# .NET Core
+bin/
+obj/
+out/
+*.suo
+*.user
+*.userosscache
+*.aspx.cs
+*.asax.cs
+*.ascx.cs
+*.csproj.user
+*.publish.xml
+*.cache
+*.vspscc
+*.vssscc
+.vs/
+
+# User-specific files
+*.rsuser
+**/*.suo
+**/*.user
+**/*.userosscache
+**/*.asax.cs
+**/*.aspx.cs
+**/*.ascx.cs
+**/*.csproj.user
+**/*.publish.xml
+**/*.cache
+**/*.vspscc
+**/*.vssscc
+**/.vs
+
+# Microsoft Azure Build Output
+csx/
+*.build.csdef
+
+# Microsoft Azure Emulator
+ecf/
+rcf/
+
+# Windows Store app package directories and files
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
+*.appx
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!*.[Cc]ache/
+
+# Others
+ClientApp/node_modules/
+node_modules/
+wwwroot/dist/
+wwwroot/assets/
+secrets.json
+local.settings.json
