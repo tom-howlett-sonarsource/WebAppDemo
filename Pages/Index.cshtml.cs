@@ -16,8 +16,31 @@ public class IndexModel : PageModel
         _logger = logger;
     }
 
+    private string _textInput;
     [BindProperty]
-    public string TextInput { get; set; }
+    public string TextInput
+    {
+        get { return _textInput; }
+        set
+        {
+            _textInput = value;
+            _logger.LogInformation("TextInput has been updated to: {TextInput}", _textInput);
+        }
+    }
+
+    public string FindFolder(string rootPath)
+    {
+        try
+        {
+            var directories = Directory.GetDirectories(rootPath, TextInput, SearchOption.AllDirectories);
+            return directories.Length > 0 ? directories[0] : "No match found";
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "An error occurred while searching for the directory.");
+            return "Error occurred";
+        }
+    }
 
 
     [BindProperty]    
