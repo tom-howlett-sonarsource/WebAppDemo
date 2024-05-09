@@ -110,6 +110,7 @@ public class IndexModel : PageModel
 
         if (!string.IsNullOrEmpty(TextInput))
         {
+            Response.Cookies.Append("TextInput", TextInput);
             return Redirect(TextInput);
         }
         return Page();
