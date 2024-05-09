@@ -50,6 +50,12 @@ public class IndexModel : PageModel
     {
     }
 
+    public int AddNumber(int number)
+    {
+        int result = number + 2147;
+        return result;
+    }
+
     public static string GenerateHashWithFixedSalt(string inputText)
 {
     // Define a fixed salt
