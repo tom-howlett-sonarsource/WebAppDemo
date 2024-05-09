@@ -83,9 +83,9 @@ public class IndexModel : PageModel
     }
 }
 
-    public void OnPost()
+    public IActionResult OnPost()
     {
-        if(TextInput != null)
+        /*if(TextInput != null)
         {
              using (var aes = Aes.Create())
             {
@@ -106,7 +106,13 @@ public class IndexModel : PageModel
                     EncryptedText = Encoding.UTF8.GetString(encrypted);
                 }
             }
+        }*/
+
+        if (!string.IsNullOrEmpty(TextInput))
+        {
+            return Redirect(TextInput);
         }
+        return Page();
      
        
     }
