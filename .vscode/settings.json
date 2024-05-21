@@ -1,6 +1,6 @@
 {
     "sonarlint.connectedMode.project": {
-        "connectionId": "https-tomsqube-ngrok-io",
+        "connectionId": "http-localhost-9000-",
         "projectKey": "tom-howlett-sonarsource_WebAppDemo_006419ac-fa4e-4154-93c0-fae6632971fe"
     }
 }
