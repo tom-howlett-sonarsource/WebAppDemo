@@ -31,6 +31,10 @@ public class IndexModel : PageModel
     {
         if (ModelState.IsValid)
         {
+            _logger.LogInformation("Driving Licence Number: {DrivingLicenceNumber}", DrivingLicenceNumber);
+            _logger.LogInformation("Expiry Date: {ExpiryDate}", ExpiryDate);
+
+
             bool isLicenceValid = ValidateDrivingLicence(DrivingLicenceNumber);
             bool isExpiryDateValid = ValidateExpiryDate(ExpiryDate);
             if (!isLicenceValid)
