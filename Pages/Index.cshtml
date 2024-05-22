@@ -8,15 +8,25 @@ Welcome
 
 
 <form method="post">
-    <div class="form-group">
-        <label asp-for="DrivingLicenceNumber"></label>
-        <input asp-for="DrivingLicenceNumber" class="form-control" />
-        <span asp-validation-for="DrivingLicenceNumber" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="ExpiryDate"></label>
-        <input asp-for="ExpiryDate" type="date" class="form-control" />
-        <span asp-validation-for="ExpiryDate" class="text-danger"></span>
-    </div>
+    <table class="table">
+        <tr>
+            <td>
+                <label asp-for="DrivingLicenceNumber"></label>
+            </td>
+            <td>
+                <input asp-for="DrivingLicenceNumber" class="form-control" />
+                <span asp-validation-for="DrivingLicenceNumber" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="ExpiryDate"></label>
+            </td>
+            <td>
+                <input asp-for="ExpiryDate" type="date" class="form-control" />
+                <span asp-validation-for="ExpiryDate" class="text-danger"></span>
+            </td>
+        </tr>
+    </table>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
