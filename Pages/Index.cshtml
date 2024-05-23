@@ -1,10 +1,29 @@
 ﻿@page
-@model IndexModel
+@model WebAppDemo.Pages.IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Index";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<form method="post">
+    <table>
+        <tr>
+            <td>
+                <label asp-for="DrivingLicenceNumber"></label>
+            </td>
+            <td>
+                <input asp-for="DrivingLicenceNumber" />
+                <span asp-validation-for="DrivingLicenceNumber"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="ExpiryDate"></label>
+            </td>
+            <td>
+                <input asp-for="ExpiryDate" />
+                <span asp-validation-for="ExpiryDate"></span>
+            </td>
+        </tr>
+    </table>
+    <button type="submit">Submit</button>
+</form>
