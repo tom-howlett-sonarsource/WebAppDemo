@@ -4,7 +4,29 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+Welcome
+
+
+<form method="post">
+    <table class="table">
+        <tr>
+            <td>
+                <label asp-for="DrivingLicenceNumber"></label>
+            </td>
+            <td>
+                <input asp-for="DrivingLicenceNumber" class="form-control" />
+                <span asp-validation-for="DrivingLicenceNumber" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="ExpiryDate"></label>
+            </td>
+            <td>
+                <input asp-for="ExpiryDate" type="date" class="form-control" />
+                <span asp-validation-for="ExpiryDate" class="text-danger"></span>
+            </td>
+        </tr>
+    </table>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
