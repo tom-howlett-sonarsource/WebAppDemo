@@ -58,3 +58,6 @@ wwwroot/dist/
 wwwroot/assets/
 secrets.json
 local.settings.json
+
+.vscode/
+.sonarlint/
