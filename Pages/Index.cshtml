@@ -8,3 +8,23 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<form method="post">
+    <table>
+        <tr>
+            <td>
+                <label for="DrivingLicenceNumber">Driving Licence Number</label>
+                <input id="DrivingLicenceNumber" type="text" asp-for="DrivingLicenceNumber" required />
+                <span asp-validation-for="DrivingLicenceNumber" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="ExpiryDate">Expiry Date</label>
+                <input id="ExpiryDate" type="date" asp-for="ExpiryDate" required />
+                <span asp-validation-for="ExpiryDate" class="text-danger"></span>
+            </td>
+        </tr>
+    </table>
+    <button type="submit">Submit</button>
+</form>
